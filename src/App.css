@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* *{
+  box-sizing: border-box;
+  margin: 0;
+} */
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.nav1{
+  background-color: blue;
+  background-image: linear-gradient(Turquoise, #e0ffff);
+}
+
+#test{
+  background-color: rgb(232, 254, 254);
+  background-image: linear-gradient(lightCyan, white);
+  font-family: 'Lora', serif;
+  color: rgb(155,43,120);
+  font-size: x-large;
+}
+
+
+
+.context{
+  height: 150px ;
+ /* background-color: rgb(155, 152, 152);
+ opacity: 50%; */
+}
+
+/* .bgimg{
+  opacity: 50%;
+} */
+
+.text-context{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 5px 15px;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+.test2{
+  /* background-color: rgb(232, 254, 254); */
+  /* background-image: linear-gradient(lightCyan, white); */
+  font-family: 'Lora', serif;
+  color:rgb(155,43,120);
+  font-style:oblique ;
+  font-size: medium;
+}
+
+.backc{
+  /* background-color: rgb(232, 254, 254);
+  background-image: linear-gradient(white, lightCyan);
+  background-color: black; */
+}
+
+
+@media (max-width: 600px){
+  .parallax-container{
+    transform: none;
+    transition: none;
+  }
+}
+
+.context1{
+  height: 100vh;
+  /* margin-top: 50px; */
+  padding: 40px;
+}
+
+h4{
+  font-family: 'Lora', serif;
+  color:rgb(155,43,120) !important;
+  font-size: medium;
+  
+}
+
+#cs{
+  font-family: 'Lora', serif;
+  border-color:rgb(155,43,120);
+  margin-bottom: 45px ;
+  /* background-image: url(https://img.freepik.com/free-vector/feeling-free-concept-illustration_114360-13580.jpg?w=740&t=st=1690270114~exp=1690270714~hmac=0f91e9c1968ebf0da44ece12eaed60f6876c4e00bf139997cc4153d65367c383); */
+  /* background-image: url(https://img.freepik.com/free-vector/overthinking-concept-illustration_114360-15146.jpg?w=740&t=st=1690280761~exp=1690281361~hmac=58f6b1022f4eb73d8e13dfeb3d5e641581d672bae284058dceeeb5a75ad2abc1); */
+  background-image: url(https://img.freepik.com/free-vector/anxiety-concept-illustration_114360-8074.jpg?w=740&t=st=1690281035~exp=1690281635~hmac=992d83d08b523f21c4177e62064f03e240c73e557f5fa1418f601d7f095efd3d);
+  background-size: 180px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-color: rgb(232, 254, 254, 0.5);
+ /* background: -webkit-linear-gradient(rgb(222, 171, 179)), rgb(rgb(237, 88, 113)),url("https://img.freepik.com/free-vector/organic-flat-people-meditating-illustration_23-2148906556.jpg?w=740&t=st=1687426454~exp=1687427054~hmac=b62d2e582eacbb2b9624ef0a28797cf4499996cf2e969165a914dbdfdfb54000"); */
+  
+  
+
+
+}
+
+input[type='radio'] {
+  
+  width: 17px;
+  height: 17px;
+  /* border-radius: 50%; */
+  outline: none;
+  border: 1px solid gray;
+}
+
+.bc{
+  border-color:rgb(155,43,120);
+}
+
+.disabled-title{
+  opacity: 0.5;
+}
+
+/* .enable-title{
+  opacity: 1;
+} */
+
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+#popup-2{
+  background-color: rgb(248, 219, 194);
+  width: 100%;
+  min-width:max-content;
+  max-width: 50%;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 ;
+  /* background-image: url(https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?w=740&t=st=1687431239~exp=1687431839~hmac=82f4dcd7a2355ebe5d09d9ce6aa74aff4f2764c9ac93b0c9b4af1626b6ac1819); */
+  background-color: whitesmoke;
+  color: whitesmoke;
+  backdrop-filter: blur(8px);
+  background-position: 600px;
+  background: -webkit-linear-gradient(rgba(185, 214, 231, 0.8), rgba(211, 157, 233, 0.8)), url("https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?w=740&t=st=1687431239~exp=1687431839~hmac=82f4dcd7a2355ebe5d09d9ce6aa74aff4f2764c9ac93b0c9b4af1626b6ac1819");
+   /* background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url(""); The least supported option. */
+  
+  
+}
+
+#name{
+  color: rgb(16,91,171);
+  font-family: 'Lora', serif;
+}
+
+#name1{
+  color: rgb(16,91,171);
+  font-family: 'Lora', serif;
+}
+
+.button,
+.button:visited,
+.button:focus {
+  color: rgb(155,43,120) !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-color: rgb(155,43,120) !important;
+}
+.button:hover,
+.button:active {
+  color: rgb(255, 255, 255) !important;
+  background-color: #9b2b78 !important;
+  border-color: rgb(255, 255, 255) !important;
+}
+
+#titles{
+  font-family: 'Lora', serif;
+  /* color:rgb(155,43,120) !important; */
+  font-size: medium;
+}
+
+#level{
+  font-family: 'Lora', serif;
+  /* color:rgb(155,43,120) !important; */
+  font-size: medium;
+}
+
+#details{
+  font-family: 'Lora', serif;
+  /* color:rgb(155,43,120) !important; */
+  font-size: medium;
+  
+}
+
+.tex{
+  font-family: 'Lora', serif;
+  /* color:rgb(155,43,120) !important; */
+  
+}
+
+.but{
+  border-radius: 18px !important;
+  background-color: #1fc6dd !important;
+  border-color: #1aaec2 !important;
+}
+
+
+
+
+
+
+
