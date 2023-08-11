@@ -7,6 +7,7 @@ import { useTotalScore } from "./TotalScoreContext";
 import ResultInfo from "./ResultInfo";
 import { Button, Card, Col, ListGroup, Row } from "react-bootstrap";
 import ContactUs from "./ContactUs";
+import Fade from "react-reveal/Fade";
 
 function Resultpage() {
   const location = useLocation();
@@ -51,54 +52,73 @@ function Resultpage() {
     }
   };
 
-  const normal = `- Having low levels of depression means you may generally experience a <br/> positive and stable mood, with minimal feelings of sadness or despair.<br/><br>
-   - Your emotional resilience may allow you to navigate life's challenges with <br/> a sense of optimism and hope.<br/> <br>
-   - You may enjoy a healthy balance of emotions.<br/><br>
-   - Keep this up with mindfulness techniques!<br>
-  
+  const normal = `- Your score on Depression Level Test suggests that your Depression level is perfectly normal.<br/> <br> 
+  - It means you may generally experience a positive and stable mood, with minimal feelings of sadness or despair. <br/> <br>
+  - Your emotional resilience may allow you to navigate life's challenges with a sense of optimism and hope. <br/> <br>
+  - You may enjoy a healthy balance of emotions.<br/>
+  - Keep this up with mindfulness techniques!<br/>
+
   `;
-  const mild = `- Having signs of mild depression means you may experience <br/>occasional feelings of sadness and low energy that impact your <br/>daily life to some extent.<br/> <br> 
-  - While you may find it challenging to muster enthusiasm at<br/> times, you can still function relatively well in most aspects of <br/>your life. <br/> <br>
+  const mild = `- Your score on Depression Level Test suggests that you may have mild Depression levels.<br/> <br> 
+  - It means you may experience occasional feelings of sadness and low energy that impact your daily life to some extent. <br/> <br>
+  - While you may find it challenging to muster enthusiasm at times, you can still function relatively well in most aspects of your life.<br/> <br> 
   - It's essential to be kind to yourself during these periods.<br/> <br>
-  - Try treating your depression with mindfulness techniques <br/>and counselling sessions.Remember that you are not alone in this journey!
-  
+  - Try treating your depression with mindfulness techniques and counselling sessions.<br/> <br> 
+  - Remember that you are not alone in this journey!<br/> <br>
+
   `;
 
-  const moderate = `- Having signs of moderate depression means you may be<br/> overwhelmed  by persistent feelings of deep sadness,  <br/>hopelessness,and emotional pain.<br/> <br>
-  - Your energy levels may be reduced, making even simple <br/>tasks feel like insurmountable challenges.<br/> <br> 
-  - It may be difficult to find joy or interest in things you once<br/> enjoyed, and you may withdraw from social interactions.<br/> <br> 
-  - Try treating your depression with counselling sessions <br/>and professional help . Remember that you are not alone in this journey!
-  
+  const moderate = `- Your score on Depression Level Test suggests that you may have moderate Depression levels. <br/> <br>
+  - Means you may be overwhelmed by persistent feelings of deep sadness, hopelessness, and emotional pain. <br/> <br>
+  - Your energy levels may be reduced, making even simple tasks feel like insurmountable challenges. <br/> <br>
+  - It may be difficult to find joy or interest in things you once enjoyed, and you may withdraw from social interactions. <br/> <br>
+  - Try treating your depression with counseling sessions and professional help. <br/> <br>
+  - Remember that you are not alone in this journey!<br/> <br>
+
   `;
-  const severe = `- Having signs of extreme depression means you may be<br/> experiencing an unrelenting sense of despair and emptiness. <br/><br>
-  - It may be challenging to find any motivation or joy in life, <br/>and  even getting through each day might feel like an insurmountable task.<br/><br> 
-  - Your emotional and physical well-being might be severely impacted.<br/><br>
-  - Try improving your anxiety management with professional<br/> help and clinical treatment. Remember that you are not alone in this journey!
-  
+  const severe = `- Your score on Depression Level Test suggests that you may have severe Depression levels. <br/> <br>
+  - It means you may be experiencing an unrelenting sense of despair and emptiness. <br/> <br>
+  - It may be challenging to find any motivation or joy in life, and even getting through each day might feel like an insurmountable task.<br/> <br>
+   - Your emotional and physical well-being might be severely impacted.<br/> <br>
+  -Try improving your depression management with professional help and clinical treatment. <br/> <br> 
+  - Remember that you are not alone in this journey!<br/> <br> 
+
   `;
   const getAnxietyLevelText = () => {
     if (updatedTotalScore >= 0 && updatedTotalScore < 20) {
       return (
-        <div>
-          < p dangerouslySetInnerHTML={{ __html: normal }}></p>
+        <div className="container">
+          <p
+            className="flex max-w-lg md:max-w-md lg"
+            dangerouslySetInnerHTML={{ __html: normal }}
+          ></p>
         </div>
       );
     } else if (updatedTotalScore >= 20 && updatedTotalScore < 40) {
       return (
-        <div>
-          <p dangerouslySetInnerHTML={{ __html: mild }}></p>
+        <div className="container">
+          <p
+            className="flex max-w-lg md:max-w-md lg"
+            dangerouslySetInnerHTML={{ __html: mild }}
+          ></p>
         </div>
       );
     } else if (updatedTotalScore >= 40 && updatedTotalScore < 60) {
       return (
-        <div>
-          <p dangerouslySetInnerHTML={{ __html: moderate }}></p>
+        <div className="container">
+          <p
+            className="flex max-w-lg md:max-w-md lg"
+            dangerouslySetInnerHTML={{ __html: moderate }}
+          ></p>
         </div>
       );
     } else if (updatedTotalScore >= 60 && updatedTotalScore <= 80) {
       return (
-        <div>
-          <p dangerouslySetInnerHTML={{ __html: severe }}></p>
+        <div className="container">
+          <p
+            className="flex max-w-lg md:max-w-md lg"
+            dangerouslySetInnerHTML={{ __html: severe }}
+          ></p>
         </div>
       );
     } else {
@@ -111,7 +131,7 @@ function Resultpage() {
   return (
     <div className="flex  bg-[#e0ffff]">
       <article class="container flex flex-col md:flex-row bg-[#e0ffff] mb-10 ">
-        <Card className="flex flex-grow-1 md:mr-4  md:mb-0 shadow-2xl shadow-teal-500 ">
+        <Card className="flex flex-grow-1 md:mr-4  md:mb-0 shadow-2xl shadow-teal-500 pt-3 mb-3">
           <Card.Body>
             <h4 className="flex justify-center m-4 pt-2">
               DEPRESSION LEVEL TEST RESULT
@@ -151,6 +171,12 @@ function Resultpage() {
                 className="flex justify-center "
               />
             </div>
+            <div>
+              <p className="italic p-3 m-3 max-w-md fw-bold cong text-[#2755a3]">
+                Congratulations on completing the Depression Test!! It was
+                really Quick and Interesting !!!
+              </p>
+            </div>
             <div className="relative flex flex-col items-baseline ">
               <ResultInfo
                 className="titles"
@@ -162,7 +188,7 @@ function Resultpage() {
                 Your Depression Level Is {anxietyLevel}
               </p>
 
-              <p className="flex p-2 m-2" id="details">
+              <p className="flex justify-center p-3 m-3 " id="details">
                 {anxietyLevelText}
               </p>
 
@@ -186,7 +212,7 @@ function Resultpage() {
           </Card.Body>
         </Card>
 
-        <Card className="conatiner flex flex-grow-1 items-center shadow-2xl shadow-teal-500 ">
+        <Card className="conatiner flex flex-grow-1 items-center shadow-2xl shadow-teal-500 mb-3">
           <Card.Body className="m-4 p-4">
             <div className="flex justify-center container">
               <h4 className="">OUR PACKAGES</h4>

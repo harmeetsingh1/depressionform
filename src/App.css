@@ -204,20 +204,28 @@ input[type='radio'] {
   font-family: 'Lora', serif;
   /* color:rgb(155,43,120) !important; */
   font-size: medium;
+  padding-left: 30px;
 }
 
 #level{
   font-family: 'Lora', serif;
   /* color:rgb(155,43,120) !important; */
   font-size: medium;
+  padding-left: 30px;
 }
 
-#details{
+#details {
   font-family: 'Lora', serif;
   /* color:rgb(155,43,120) !important; */
   font-size: medium;
-  
-}
+  white-space: wrap;
+  display: flex !important;
+  }
+
+
+
+
+
 
 .tex{
   font-family: 'Lora', serif;
@@ -231,7 +239,13 @@ input[type='radio'] {
   border-color: #1aaec2 !important;
 }
 
+.lg{
+  display: flex !important;
+}
 
+.cong{
+  font-family: 'Lora', serif;
+}
 
 
 
